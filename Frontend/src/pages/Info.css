@@ -1,0 +1,251 @@
+/* src/pages/Info.css */
+.Info {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.Info::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-right: 10px; /* Add margin to space it from the user info */
+}
+
+.search-bar input {
+  width: 100%; /* Adjust the width as needed */
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info span {
+  font-size: 1rem;
+  color: white;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto; /* Enable scrolling within the content area */
+}
+
+.top-streamer {
+  margin-top: 20px;
+  padding: 0px;
+  background: #2e2a3b; /* Changed to darker purple-black */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.top-streamer:hover {
+  transform: scale(1.1) translateY(-10px);
+  z-index: 1; /* Bring the hovered item to the front */
+}
+
+.top-streamer img {
+  width: 80%; /* Adjust size to not fill the entire box */
+  height: auto;
+  border-radius: 10px;
+}
+
+.top-streamer-content {
+  width: 80%; /* Shorten the width of the box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2e2a3b; /* Match the background color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.recommended-streamers {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended-streamers h2 {
+  margin-bottom: 10px;
+}
+
+.streamer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Space items evenly */
+}
+
+.streamer {
+  margin: 10px;
+  padding: 10px;
+  background: #2e2a3b; /* Changed to darker purple-black */
+  border-radius: 5px;
+  flex: 0 1 calc(33.333% - 20px); /* Ensure 3 items per row */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.streamer:hover {
+  transform: scale(1.1) translateY(-10px);
+  z-index: 1; /* Bring the hovered item to the front */
+}
+
+.placeholder {
+  visibility: hidden; /* Hide placeholders */
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid black; /* Outer black border */
+  border-radius: 10px; /* Adjust as needed */
+  padding: 30px; /* Space between inner and outer border */
+  background: black;
+  animation: glowing 2s infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px purple, 0 0 10px purple, 0 0 15px purple, 0 0 20px purple;
+  }
+  50% {
+    box-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px purple, 0 0 40px purple;
+  }
+  100% {
+    box-shadow: 0 0 5px purple, 0 0 10px purple, 0 0 15px purple, 0 0 20px purple;
+  }
+}
+
+.thumbnail-container {
+  position: relative;
+  display: inline-block; /* Ensure proper positioning of absolute elements */
+  border: 2px solid gray; /* Inner gray border */
+  border-radius: 5px; /* Make the corners rounded */
+  overflow: hidden; /* Ensure content stays within the border */
+}
+
+.thumbnail-container img {
+  width: 100%; /* Make sure images fit their container */
+  height: auto;
+  border-radius: 5px; /* Ensures border-radius matches the container */
+}
+
+.streamer-name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.Back-link {
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #ab55d3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.Back-link:hover {
+  background-color: #611c81;
+}
+
+/* Add this media query at the bottom of your existing CSS */
+@media (min-width: 1200px) {
+  .top-streamer .thumbnail-wrapper {
+    width: 20%; /* Make the top live streamer bigger */
+    animation: golden-glow 2s infinite;
+  }
+
+  .recommended-streamers .streamer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .recommended-streamers .streamer {
+    flex: 0 1 calc(33.333% - 20px); /* Ensure 3 items per row */
+    margin: 10px;
+    max-width: 600px;
+  }
+
+  .recommended-streamers .thumbnail-wrapper {
+    padding: 10px;
+    background: black;
+    animation: glowing 2s infinite;
+    border: 2px solid black; /* Outer black border */
+    border-radius: 10px; /* Adjust as needed */
+  }
+}
+
+@keyframes golden-glow {
+  0% {
+    box-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold;
+  }
+  50% {
+    box-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px gold, 0 0 40px gold;
+  }
+  100% {
+    box-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold;
+  }
+}

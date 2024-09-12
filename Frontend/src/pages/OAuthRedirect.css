@@ -1,0 +1,16 @@
+/* src/pages/OAuthRedirect.css */
+.OAuthRedirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .OAuthRedirect h1 {
+    margin-bottom: 20px;
+  }
+  

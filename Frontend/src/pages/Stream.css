@@ -1,0 +1,92 @@
+/* src/pages/Stream.css */
+.Stream {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+  
+  .Stream::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  .back-button {
+    background-color: #ab55d3; /* Purple background */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Smooth rounded corners */
+    padding: 10px; /* Add some padding */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transitions */
+  }
+  
+  .back-button:hover {
+    background-color: #7a34a0; /* Darken color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .back-button .material-icons {
+    font-size: 30px; /* Increase the size of the icon */
+    color: white; /* Set icon color */
+  }
+  .navbar-text {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-info span {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .stream-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling within the content area */
+  }
+  

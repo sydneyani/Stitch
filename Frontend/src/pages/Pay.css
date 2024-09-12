@@ -1,0 +1,130 @@
+/* src/pages/Pay.css */
+.Pay {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+}
+
+.Pay h1 {
+    margin-bottom: 20px;
+}
+
+.Pay form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Adjust as necessary for your layout */
+    max-width: 800px; /* Added max-width to limit the form width */
+    margin-bottom: 40px; /* Added margin-bottom for spacing */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 10px; /* Added gap for horizontal spacing */
+}
+
+.Pay input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.Pay button {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ab55d3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px; /* Added margin-top for spacing */
+    align-self: center; /* Center the button */
+}
+
+.Pay button:hover {
+    background-color: #611c81;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex-shrink: 0; /* Prevent navbar from shrinking */
+}
+
+.logo {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.navbar-text {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.pay-content {
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-section {
+    margin-top: 10px; /* Increased margin-top for more space */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-section h1 {
+    color: black;
+    font-weight: bold;
+}
+
+.info-section h2 {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.info-section ul {
+    list-style-type: disc; /* Use disc bullets */
+    padding-left: 20px; /* Add some padding for list indentation */
+    text-align: left; /* Align text to the left */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.info-section ul li {
+    margin-bottom: 10px;
+    color: white; /* Change list item text color */
+}
+
+.form-row.centered {
+    justify-content: center;
+    gap: 10px; /* Added gap for horizontal spacing */
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+}
