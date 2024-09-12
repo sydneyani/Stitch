@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import './App.css';
-import Info from './pages/Info';
-import Buy from './pages/Buy';
-import Stream from './pages/Stream';
-import OAuthRedirect from './pages/OAuthRedirect';
-import LinkedAccount from './pages/LinkedAccount';
-import Pay from './pages/Pay'; // Import the new Pay component
+import Info from './pages/Info.tsx';
+import Buy from './pages/Buy.tsx';
+import Stream from './pages/Stream.tsx';
+import OAuthRedirect from './pages/OAuthRedirect.tsx';
+import LinkedAccount from './pages/LinkedAccount.tsx';
+import Pay from './pages/Pay.tsx'; // Import the new Pay component
 
 
 const App: React.FC = () => {
