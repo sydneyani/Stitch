@@ -21,17 +21,17 @@ const Pay: React.FC = () => {
     }
   }, [location]);
 
-  const handlePayment = async () => {
-    try {
-      const response = await axios.post('http://localhost:5001/api/create-checkout-session', {
-        plan: selectedPlan,
-        streamer: streamer,
-      });
-      window.location.href = response.data.checkoutUrl;
-    } catch (error) {
-      console.error('Error creating checkout session:', error);
-    }
-  };
+const handlePayment = async () => {
+  try {
+    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/create-checkout-session`, {
+      plan: selectedPlan,
+      streamer: streamer,
+    });
+    window.location.href = response.data.checkoutUrl;
+  } catch (error) {
+    console.error('Error creating checkout session:', error);
+  }
+};
   
   return (
     <div className="Pay">
