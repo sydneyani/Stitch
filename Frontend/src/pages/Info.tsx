@@ -29,7 +29,7 @@ const Info: React.FC = () => {
         const response = await axios.get('https://api.twitch.tv/helix/streams', {
           headers: {
             'Client-ID': 'wgp4pcigettkv18ljb9nmp3km3tebq', // Replace with your actual Client ID
-            'Authorization': 'Bearer di17r39rccpp1kh5whk9osp9rbz4xi' // Replace with your actual OAuth token
+            'Authorization': 'Bearer 3kf85oqx9f1n7nhchko2ecuh6x9f45' // Replace with your actual OAuth token
           },
           params: {
             first: 40,
@@ -48,7 +48,7 @@ const Info: React.FC = () => {
         const response = await axios.get('https://api.twitch.tv/helix/users', {
           headers: {
             'Client-ID': 'wgp4pcigettkv18ljb9nmp3km3tebq', // Replace with your actual Client ID
-            'Authorization': 'Bearer di17r39rccpp1kh5whk9osp9rbz4xi' // Replace with your actual OAuth token
+            'Authorization': 'Bearer 3kf85oqx9f1n7nhchko2ecuh6x9f45' // Replace with your actual OAuth token
           }
         });
         setUser(response.data.data[0]);
